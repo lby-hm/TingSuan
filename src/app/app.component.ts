@@ -20,7 +20,7 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent implements OnInit, AfterViewInit {
   protected time: string = "00:00";
   protected timerStatus: string = "stopped";
-  protected startOrPauseIcon: string = "开始计时";
+  protected startOrPauseIcon: string = "play_arrow";
   private timer: any;
   private seconds = 0;
   private minutes = 0;
@@ -34,7 +34,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle("听算 - 50题 - " + new Date().toDateString());
+    let date = new Date().toLocaleDateString('zh-CN',{  weekday: 'long', month: 'long',  day: 'numeric',});
+    this.titleService.setTitle("听算 - 50题 - " + date);
     this.generateAllProblems();
     this.pickRandomProblems();
   }
@@ -54,14 +55,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   protected startOrPauseTimer(): void {
     if (this.timerStatus === "stopped" || this.timerStatus === "paused") {
       this.timerStatus = "started";
-      this.startOrPauseIcon = "暂停计时";
+      this.startOrPauseIcon = "pause";
       this.startCounting();
       return;
     }
 
     if (this.timerStatus === "started") {
       this.timerStatus = "paused";
-      this.startOrPauseIcon = "开始计时";
+      this.startOrPauseIcon = "play_arrow";
       this.stopCounting();
       return;
     }
@@ -69,7 +70,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   protected stopTimer(): void {
     this.timerStatus = "stopped";
-    this.startOrPauseIcon = "开始计时";
+    this.startOrPauseIcon = "play_arrow";
     this.minutes = 0;
     this.seconds = 0;
     this.time = this.formatTime(this.minutes) + ":" + this.formatTime(this.seconds);

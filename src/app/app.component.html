@@ -9,10 +9,10 @@
   </div>
   <div class="actions">
     <button mat-fab class="start-pause-button" (click)="startOrPauseTimer()">
-      {{startOrPauseIcon}}
+      <mat-icon>{{startOrPauseIcon}}</mat-icon>
     </button>
     <button mat-fab class="stop-button" (click)="stopTimer()" [disabled]="timerStatus !== 'paused'">
-      停止计时
+      <mat-icon>stop</mat-icon>
     </button>
   </div>
 </div>
