@@ -1,22 +1,25 @@
-# TingSuan
+# 听算
 
-This project is for personal use.
+这个项目是我个人自用的。
 
-It's a web site to be opened in a mobile browser or even the WeChat built-in browser.
+这是个适合手机浏览器或着微信内置浏览器打开的网页。
 
-It's an app for practicing the math calculating.
+这个app是用来给孩子练习口算听算的。
 
-Curreny setting is:
-- problem each time: 50
-- problem scope: within 20
-- include addition: yes
-- include addition with carrying: yes
-- include subtraction: yes
-- include subtraction with carrying: **no**
+我家孩子目前的配置是：
+- 每次题目数量：50
+- 最大：20
+- 最小：2
+- 包含加法：是
+- 包含进位加法：是
+- 包含减法：是
+- 包含退位减法：**否**
 
-How to use:
-- Parents open the site, click the start button at bottom, read the problems in the list.
-- Children listen and answer the problems.
-- Parents click the pause button at bottom when children finished all problems and record the time.
+怎么用：
+- 我或我老婆打开这个页面，点击开始按钮开始计时，然后依次报出列表中的题目。
+- 孩子不看手机，听完一题答一题。
+- 全部题目答完后，按下结束按钮，记录一下用时。
 
-It's now deployed to https://tingsuan.pages.dev
+项目自动发布:
+- 分支：main
+- 地址：[cloudflare](https://tingsuan.pages.dev)
