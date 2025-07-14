@@ -263,15 +263,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   private formatProblem(problem: Problem) {
-    //var random = this.getRandomInt(1, 3);
-    // 降低难度
-    var random = 3;
-    if (random === 1) {
-      return `(   ) ${problem.operator} ${problem.Num2} = ${problem.result}`;
-    } else if (random === 2) {
-      return `${problem.Num1} ${problem.operator} (   ) = ${problem.result}`;
-    } else {
-      return `${problem.Num1} ${problem.operator} ${problem.Num2} = (   )`;
-    }
+    return `${problem.Num1} ${problem.operator} ${problem.Num2} = ${problem.result}`;
   }
 }
