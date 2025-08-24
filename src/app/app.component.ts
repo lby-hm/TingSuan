@@ -51,7 +51,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     let date = new Date().toLocaleDateString('zh-CN', { weekday: 'long', month: 'long', day: 'numeric', });
-    this.titleService.setTitle("听算 - 50题 - " + date);
+    this.titleService.setTitle("听算 - 30题 - " + date);
     this.randomProblemList = this.getRandomProblemList();
   }
 
@@ -137,10 +137,10 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
     }
 
-    let randomProblemList1 = this.pickRandomProblemFromList1(problemList1, 5);
-    let randomProblemList2 = this.pickRandomProblemFromList2(problemList2, 20);
-    let randomProblemList3 = this.pickRandomProblemFromList3(problemList3, 5);
-    let randomProblemList4 = this.pickRandomProblemFromList4(problemList4, 20);
+    let randomProblemList1 = this.pickRandomProblemFromList1(problemList1, 2);
+    let randomProblemList2 = this.pickRandomProblemFromList2(problemList2, 13);
+    let randomProblemList3 = this.pickRandomProblemFromList3(problemList3, 2);
+    let randomProblemList4 = this.pickRandomProblemFromList4(problemList4, 13);
     let randomProblemList = randomProblemList1.concat(randomProblemList2).concat(randomProblemList3).concat(randomProblemList4);
 
     var problemList = this.pickRandomProblemFromList(randomProblemList, 52);
